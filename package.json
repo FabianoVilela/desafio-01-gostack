@@ -1,0 +1,11 @@
+{
+  "author": "Fabiano Vilela <fabiano@fabianovilela.com>",
+  "name": "desafio01",
+  "description": "Desafio 01 - Bootcamp GoStack - Rocketseat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
