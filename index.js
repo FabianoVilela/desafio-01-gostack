@@ -36,7 +36,7 @@ server.use(logRequests);
  */
 server.get('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
-  const project = projects.find(p => p.id == id);
+  const project = projects.find(p => p.id === id);
 
   return res.json(project);
 });
@@ -77,7 +77,7 @@ server.put('/projects/:id', checkProjectExists, (req, res) => {
 
 server.delete('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
-  const projectIndex = projects.findIndex(p => p.id == id);
+  const projectIndex = projects.findIndex(p => p.id === id);
 
   projects.splice(projectIndex, 1);
 
@@ -90,7 +90,7 @@ server.delete('/projects/:id', checkProjectExists, (req, res) => {
 server.post('/projects/:id/tasks', checkProjectExists, (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
-  const project = projects.find(p => p.id == id);
+  const project = projects.find(p => p.id === id);
 
   project.tasks.push(title);
 
